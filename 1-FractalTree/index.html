@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Fractal Tree</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+    <canvas id="canvas"></canvas>
+
+    <div class="panel">
+      <h1>🌳 Fractal Tree</h1>
+      <p>
+        Pohybuj myší po obrazovce a sleduj, jak se mění úhel větví.
+        Kliknutím změníš barevný styl.
+      </p>
+
+      <div class="control">
+        <label>Hloubka větvení <span id="depthValue">10</span></label>
+        <input type="range" id="depth" min="3" max="13" value="10">
+      </div>
+
+      <div class="control">
+        <label>Délka kmene <span id="lengthValue">150</span></label>
+        <input type="range" id="length" min="70" max="220" value="150">
+      </div>
+
+      <div class="control">
+        <label>Zkrácení větví <span id="scaleValue">0.72</span></label>
+        <input type="range" id="scale" min="55" max="82" value="72">
+      </div>
+
+      <div class="buttons">
+        <button id="randomBtn">Random</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </div>
+
+    <div class="hint">
+      🖱️ Pohyb myší = změna úhlu | Kliknutí = změna barev
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
