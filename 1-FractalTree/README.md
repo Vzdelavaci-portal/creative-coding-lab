@@ -13,7 +13,7 @@ Move your mouse across the screen and watch the tree dynamically change its shap
 GitHub Pages:
 
 ```text
-https://your-username.github.io/creative-coding-lab/1-FractalTree/
+https://vzdelavaci-portal.github.io/creative-coding-lab/1-FractalTree/
 ```
 
 ---
