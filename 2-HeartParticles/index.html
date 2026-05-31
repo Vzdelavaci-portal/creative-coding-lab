@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart Particles</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <div class="panel">
+    <h1>❤️ Heart Particles</h1>
+    <p>Move your mouse over the heart and watch the particles react.</p>
+
+    <div class="control">
+      <label>Particles <span id="particleValue">900</span></label>
+      <input type="range" id="particleCount" min="300" max="1800" value="900">
+    </div>
+
+    <div class="control">
+      <label>Repel Force <span id="forceValue">90</span></label>
+      <input type="range" id="force" min="30" max="180" value="90">
+    </div>
+
+    <div class="buttons">
+      <button id="colorBtn">Change Colors</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    🖱️ Move mouse = particle reaction | Click = color change
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
