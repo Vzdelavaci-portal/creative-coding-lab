@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Spiral Generator</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <div class="panel">
+    <h1>🌀 Spiral Generator</h1>
+
+    <p>
+      Create animated mathematical spirals and control their shape in real time.
+    </p>
+
+    <div class="control">
+      <label>Points <span id="pointsValue">900</span></label>
+      <input type="range" id="points" min="200" max="2500" value="900">
+    </div>
+
+    <div class="control">
+      <label>Density <span id="densityValue">0.18</span></label>
+      <input type="range" id="density" min="5" max="40" value="18">
+    </div>
+
+    <div class="control">
+      <label>Rotation Speed <span id="speedValue">0.01</span></label>
+      <input type="range" id="speed" min="0" max="40" value="10">
+    </div>
+
+    <div class="control">
+      <label>Glow <span id="glowValue">16</span></label>
+      <input type="range" id="glow" min="0" max="35" value="16">
+    </div>
+
+    <div class="buttons">
+      <button id="colorBtn">Colors</button>
+      <button id="randomBtn">Random</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    🖱️ Move mouse = distortion | Click = color change
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
