@@ -24,7 +24,7 @@ The goal is to demonstrate how code can be used not only to solve problems but a
 GitHub Pages:
 
 ```text
-https://your-username.github.io/creative-coding-lab/
+https://vzdelavaci-portal.github.io/creative-coding-lab/
 ```
 
 ---
