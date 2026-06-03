@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mandala Painter</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <div class="panel">
+    <h1>🎭 Mandala Painter</h1>
+
+    <p>
+      Draw with your mouse and create symmetrical glowing mandalas in real time.
+    </p>
+
+    <div class="control">
+      <label>Symmetry <span id="symmetryValue">12</span></label>
+      <input type="range" id="symmetry" min="4" max="32" value="12" step="2">
+    </div>
+
+    <div class="control">
+      <label>Brush Size <span id="brushValue">4</span></label>
+      <input type="range" id="brushSize" min="1" max="20" value="4">
+    </div>
+
+    <div class="control">
+      <label>Glow <span id="glowValue">14</span></label>
+      <input type="range" id="glow" min="0" max="35" value="14">
+    </div>
+
+    <div class="control">
+      <label>Color</label>
+      <input type="color" id="colorPicker" value="#38bdf8">
+    </div>
+
+    <div class="buttons">
+      <button id="colorBtn">Random Color</button>
+      <button id="clearBtn">Clear</button>
+      <button id="saveBtn">Save PNG</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    🖱️ Hold and draw | 🎨 Change color | 💾 Save your mandala
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
