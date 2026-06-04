@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Galaxy Generator</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <div class="panel">
+    <h1>🌌 Galaxy Generator</h1>
+
+    <p>
+      Generate a glowing spiral galaxy and control its stars, arms and rotation in real time.
+    </p>
+
+    <div class="control">
+      <label>Stars <span id="starsValue">2200</span></label>
+      <input type="range" id="stars" min="500" max="6000" value="2200">
+    </div>
+
+    <div class="control">
+      <label>Spiral Arms <span id="armsValue">4</span></label>
+      <input type="range" id="arms" min="2" max="8" value="4">
+    </div>
+
+    <div class="control">
+      <label>Galaxy Size <span id="sizeValue">0.42</span></label>
+      <input type="range" id="galaxySize" min="25" max="48" value="42">
+    </div>
+
+    <div class="control">
+      <label>Rotation Speed <span id="speedValue">0.20</span></label>
+      <input type="range" id="speed" min="0" max="80" value="20">
+    </div>
+
+    <div class="control">
+      <label>Glow <span id="glowValue">12</span></label>
+      <input type="range" id="glow" min="0" max="30" value="12">
+    </div>
+
+    <div class="buttons">
+      <button id="colorBtn">Colors</button>
+      <button id="randomBtn">Random</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    🖱️ Move mouse = gravity distortion | Click = color change
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
