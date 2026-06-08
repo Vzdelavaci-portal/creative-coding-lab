@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black Hole Sandbox</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div class="panel">
+    <h1>⚫ Black Hole Sandbox</h1>
+    <p>
+      Create matter bursts, place mini singularities and watch particles bend around gravity wells.
+    </p>
+
+    <div class="control">
+      <label>Particles <span id="particlesValue">1800</span></label>
+      <input type="range" id="particles" min="400" max="5000" value="1800">
+    </div>
+
+    <div class="control">
+      <label>Main Gravity <span id="gravityValue">0.75</span></label>
+      <input type="range" id="gravity" min="20" max="150" value="75">
+    </div>
+
+    <div class="control">
+      <label>Disk Size <span id="diskValue">0.42</span></label>
+      <input type="range" id="diskSize" min="25" max="55" value="42">
+    </div>
+
+    <div class="control">
+      <label>Speed <span id="speedValue">1.00</span></label>
+      <input type="range" id="speed" min="20" max="220" value="100">
+    </div>
+
+    <div class="control">
+      <label>Glow <span id="glowValue">16</span></label>
+      <input type="range" id="glow" min="0" max="40" value="16">
+    </div>
+
+    <div class="buttons">
+      <button id="colorBtn">Colors</button>
+      <button id="randomBtn">Random</button>
+      <button id="scanBtn">Scan</button>
+      <button id="clearSingularitiesBtn">Clear Singularities</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    🖱️ Click = matter burst | Shift + Click = mini singularity | Scan = shockwave
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
