@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Symmetry Painter Pro</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <div class="panel">
+    <h1>🎨 Symmetry Painter</h1>
+
+    <p>
+      Draw glowing symmetrical art with mirror, kaleidoscope and auto artist modes.
+    </p>
+
+    <div class="control">
+      <label>Symmetry <span id="symmetryValue">12</span></label>
+      <input type="range" id="symmetry" min="2" max="32" value="12" step="2">
+    </div>
+
+    <div class="control">
+      <label>Brush Size <span id="brushValue">5</span></label>
+      <input type="range" id="brushSize" min="1" max="40" value="5">
+    </div>
+
+    <div class="control">
+      <label>Glow <span id="glowValue">18</span></label>
+      <input type="range" id="glow" min="0" max="50" value="18">
+    </div>
+
+    <div class="control">
+      <label>Brush Type</label>
+      <select id="brushType">
+        <option value="normal">Normal</option>
+        <option value="glow">Glow</option>
+        <option value="rainbow">Rainbow</option>
+        <option value="particle">Particle</option>
+        <option value="star">Star</option>
+      </select>
+    </div>
+
+    <div class="control">
+      <label>Mode</label>
+      <select id="drawMode">
+        <option value="symmetry">Symmetry</option>
+        <option value="mirror">Mirror</option>
+        <option value="kaleidoscope">Kaleidoscope</option>
+      </select>
+    </div>
+
+    <div class="control">
+      <label>Color</label>
+      <input type="color" id="colorPicker" value="#38bdf8">
+    </div>
+
+    <div class="buttons">
+      <button id="randomBtn">Random</button>
+      <button id="autoBtn">Auto Artist</button>
+      <button id="clearBtn">Clear</button>
+      <button id="saveBtn">Save PNG</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    🖱️ Hold and draw | 🤖 Auto Artist | 💾 Save PNG
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
