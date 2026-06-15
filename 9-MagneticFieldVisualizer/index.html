@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Magnetic Field Visualizer</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <div class="panel">
+    <h1>🧲 Magnetic Field Visualizer</h1>
+
+    <p>
+      Add charges and explore animated field lines, flowing particles and force visualization.
+    </p>
+
+    <div class="control">
+      <label>Mode</label>
+      <select id="mode">
+        <option value="electric">Electric Field</option>
+        <option value="magnetic">Magnetic Style</option>
+        <option value="gravity">Gravity Field</option>
+      </select>
+    </div>
+
+    <div class="control">
+      <label>Field Lines <span id="linesValue">120</span></label>
+      <input type="range" id="lines" min="30" max="260" value="120">
+    </div>
+
+    <div class="control">
+      <label>Particles <span id="particlesValue">350</span></label>
+      <input type="range" id="particles" min="50" max="900" value="350">
+    </div>
+
+    <div class="control">
+      <label>Field Strength <span id="strengthValue">1.00</span></label>
+      <input type="range" id="strength" min="20" max="220" value="100">
+    </div>
+
+    <div class="control">
+      <label>Line Length <span id="lengthValue">90</span></label>
+      <input type="range" id="lineLength" min="30" max="180" value="90">
+    </div>
+
+    <div class="control">
+      <label>Glow <span id="glowValue">14</span></label>
+      <input type="range" id="glow" min="0" max="35" value="14">
+    </div>
+
+    <div class="buttons">
+      <button id="positiveBtn">+ Charge</button>
+      <button id="negativeBtn">- Charge</button>
+      <button id="rainBtn">Field Rain</button>
+      <button id="presetBtn">Preset</button>
+      <button id="clearBtn">Clear</button>
+      <button id="saveBtn">Save PNG</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    🖱️ Click = add selected charge | Shift + Click = opposite charge | Drag charges to move them
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
