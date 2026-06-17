@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Neural Network Visualizer</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <div class="panel">
+    <h1>🧠 Neural Network Visualizer</h1>
+
+    <p>
+      Generate neural networks, send signals and watch connections learn in real time.
+    </p>
+
+    <div class="stats">
+      <div>Neurons: <span id="neuronCount">0</span></div>
+      <div>Connections: <span id="connectionCount">0</span></div>
+      <div>Signals: <span id="signalCount">0</span></div>
+    </div>
+
+    <div class="control">
+      <label>Network Size <span id="sizeValue">Medium</span></label>
+      <input type="range" id="networkSize" min="1" max="3" value="2">
+    </div>
+
+    <div class="control">
+      <label>Signal Speed <span id="speedValue">1.00</span></label>
+      <input type="range" id="signalSpeed" min="30" max="220" value="100">
+    </div>
+
+    <div class="control">
+      <label>Glow <span id="glowValue">18</span></label>
+      <input type="range" id="glow" min="0" max="40" value="18">
+    </div>
+
+    <div class="control">
+      <label>Theme</label>
+      <select id="theme">
+        <option value="blue">Blue Neural</option>
+        <option value="purple">Purple AI</option>
+        <option value="matrix">Matrix</option>
+        <option value="cyber">Cyberpunk</option>
+        <option value="fire">Fire Brain</option>
+      </select>
+    </div>
+
+    <div class="buttons">
+      <button id="generateBtn">Generate</button>
+      <button id="pulseBtn">Pulse</button>
+      <button id="trainBtn">Train</button>
+      <button id="randomBtn">Random</button>
+      <button id="clearSignalsBtn">Clear Signals</button>
+      <button id="saveBtn">Save PNG</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    🖱️ Drag neurons | Click neuron = send signal | Train = learning animation
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
