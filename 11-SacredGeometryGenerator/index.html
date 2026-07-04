@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sacred Geometry Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <canvas id="scene" aria-label="Interactive sacred geometry canvas"></canvas>
+
+    <header class="topbar glass">
+      <div>
+        <p class="eyebrow">Creative Coding Lab</p>
+        <h1>Sacred Geometry Generator</h1>
+      </div>
+      <div class="toolbar">
+        <button id="randomPattern" class="icon-button" title="Random pattern">Shuffle</button>
+        <button id="randomColors" class="icon-button" title="Random colors">Colors</button>
+        <button id="reset" class="icon-button" title="Reset view">Reset</button>
+        <button id="fullscreen" class="icon-button" title="Fullscreen">Full</button>
+      </div>
+    </header>
+
+    <aside class="control-panel glass">
+      <section>
+        <label for="pattern">Pattern</label>
+        <select id="pattern"></select>
+      </section>
+
+      <div class="grid-two">
+        <section>
+          <label for="colorMode">Color Mode</label>
+          <select id="colorMode"></select>
+        </section>
+        <section>
+          <label for="backgroundMode">Background</label>
+          <select id="backgroundMode"></select>
+        </section>
+      </div>
+
+      <section class="slider-row">
+        <label for="scale">Scale <span id="scaleValue"></span></label>
+        <input id="scale" type="range" min="0.45" max="1.85" step="0.01">
+      </section>
+      <section class="slider-row">
+        <label for="rotation">Rotation <span id="rotationValue"></span></label>
+        <input id="rotation" type="range" min="-180" max="180" step="1">
+      </section>
+      <section class="slider-row">
+        <label for="lineWidth">Line Thickness <span id="lineWidthValue"></span></label>
+        <input id="lineWidth" type="range" min="0.5" max="8" step="0.1">
+      </section>
+      <section class="slider-row">
+        <label for="glow">Glow <span id="glowValue"></span></label>
+        <input id="glow" type="range" min="0" max="36" step="1">
+      </section>
+      <section class="slider-row">
+        <label for="complexity">Complexity <span id="complexityValue"></span></label>
+        <input id="complexity" type="range" min="1" max="8" step="1">
+      </section>
+      <section class="slider-row">
+        <label for="speed">Animation Speed <span id="speedValue"></span></label>
+        <input id="speed" type="range" min="0" max="3" step="0.05">
+      </section>
+
+      <div class="toggle-grid">
+        <label><input id="particles" type="checkbox"> Particles</label>
+        <label><input id="pulse" type="checkbox"> Pulse</label>
+        <label><input id="breathing" type="checkbox"> Breathing</label>
+        <label><input id="rotate" type="checkbox"> Rotate</label>
+        <label><input id="transparent" type="checkbox"> Transparent export</label>
+      </div>
+
+      <div class="export-row">
+        <button id="exportPng">Export PNG</button>
+        <button id="exportSvg">Export SVG</button>
+      </div>
+    </aside>
+
+    <footer class="status glass">
+      <span id="statusPattern">Flower of Life</span>
+      <span>Wheel zoom</span>
+      <span>Drag rotate</span>
+      <span>Double click reset</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
