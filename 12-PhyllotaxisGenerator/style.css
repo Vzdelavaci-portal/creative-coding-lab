@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(circle at center, #1e293b, #020617 75%);
+  overflow: hidden;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair;
+}
+
+.panel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 355px;
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+.panel h1 {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.panel p {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.control {
+  margin-bottom: 13px;
+}
+
+.control label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #e5e7eb;
+}
+
+input[type="range"],
+select {
+  width: 100%;
+}
+
+input[type="range"] {
+  accent-color: #facc15;
+}
+
+select {
+  height: 38px;
+  border: none;
+  border-radius: 12px;
+  padding: 0 12px;
+  background: #1e293b;
+  color: white;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+button {
+  border: none;
+  padding: 11px;
+  border-radius: 14px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(135deg, #facc15, #f97316, #fb7185);
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(250, 204, 21, 0.35);
+}
+
+button.active {
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+}
+
+#saveBtn {
+  grid-column: span 2;
+}
+
+.hint {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  max-width: 420px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .panel {
+    width: calc(100% - 40px);
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .hint {
+    display: none;
+  }
+}

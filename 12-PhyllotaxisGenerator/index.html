@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Phyllotaxis Generator</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <div class="panel">
+    <h1>🌻 Phyllotaxis Generator</h1>
+
+    <p>
+      Create sunflower-like Fibonacci patterns using the golden angle, particles and generative art.
+    </p>
+
+    <div class="control">
+      <label>Points <span id="pointsValue">900</span></label>
+      <input type="range" id="points" min="100" max="3500" value="900">
+    </div>
+
+    <div class="control">
+      <label>Golden Angle <span id="angleValue">137.5°</span></label>
+      <input type="range" id="angle" min="1000" max="1800" value="1375">
+    </div>
+
+    <div class="control">
+      <label>Spacing <span id="spacingValue">7.0</span></label>
+      <input type="range" id="spacing" min="25" max="120" value="70">
+    </div>
+
+    <div class="control">
+      <label>Dot Size <span id="sizeValue">4</span></label>
+      <input type="range" id="dotSize" min="1" max="14" value="4">
+    </div>
+
+    <div class="control">
+      <label>Rotation Speed <span id="speedValue">0.20</span></label>
+      <input type="range" id="speed" min="0" max="100" value="20">
+    </div>
+
+    <div class="control">
+      <label>Glow <span id="glowValue">14</span></label>
+      <input type="range" id="glow" min="0" max="40" value="14">
+    </div>
+
+    <div class="control">
+      <label>Color Mode</label>
+      <select id="colorMode">
+        <option value="sunflower">Sunflower</option>
+        <option value="rainbow">Rainbow</option>
+        <option value="galaxy">Galaxy</option>
+        <option value="ocean">Ocean</option>
+        <option value="fire">Fire</option>
+        <option value="mono">Monochrome</option>
+      </select>
+    </div>
+
+    <div class="buttons">
+      <button id="goldenBtn">Golden</button>
+      <button id="randomBtn">Random</button>
+      <button id="pulseBtn">Pulse</button>
+      <button id="resetBtn">Reset</button>
+      <button id="saveBtn">Save PNG</button>
+    </div>
+  </div>
+
+  <div class="hint">
+    🖱️ Move mouse = organic distortion | Try changing the angle
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
