@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Voronoi Art Generator</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="canvas"></canvas>
+
+  <aside class="panel">
+    <div class="panel-header">
+      <div>
+        <span class="eyebrow">Creative Coding Lab #13</span>
+        <h1>🔷 Voronoi Art Generator</h1>
+      </div>
+
+      <button
+        id="collapseBtn"
+        class="icon-button"
+        type="button"
+        aria-label="Collapse control panel"
+      >
+        −
+      </button>
+    </div>
+
+    <div class="panel-content">
+      <p class="description">
+        Create colorful Voronoi mosaics, move their control points and transform
+        simple geometry into stained-glass inspired artwork.
+      </p>
+
+      <div class="stats">
+        <div>
+          <span>Points</span>
+          <strong id="pointCount">0</strong>
+        </div>
+
+        <div>
+          <span>FPS</span>
+          <strong id="fpsValue">60</strong>
+        </div>
+
+        <div>
+          <span>Mode</span>
+          <strong id="modeValue">Cells</strong>
+        </div>
+      </div>
+
+      <div class="control">
+        <label for="pointAmount">
+          Point Count
+          <span id="pointAmountValue">26</span>
+        </label>
+
+        <input
+          type="range"
+          id="pointAmount"
+          min="4"
+          max="80"
+          value="26"
+        />
+      </div>
+
+      <div class="control">
+        <label for="resolution">
+          Detail
+          <span id="resolutionValue">5</span>
+        </label>
+
+        <input
+          type="range"
+          id="resolution"
+          min="3"
+          max="12"
+          value="5"
+        />
+      </div>
+
+      <div class="control">
+        <label for="edgeWidth">
+          Edge Width
+          <span id="edgeWidthValue">2.4</span>
+        </label>
+
+        <input
+          type="range"
+          id="edgeWidth"
+          min="0"
+          max="80"
+          value="24"
+        />
+      </div>
+
+      <div class="control">
+        <label for="glow">
+          Glow
+          <span id="glowValue">14</span>
+        </label>
+
+        <input
+          type="range"
+          id="glow"
+          min="0"
+          max="40"
+          value="14"
+        />
+      </div>
+
+      <div class="control">
+        <label for="animationSpeed">
+          Motion Speed
+          <span id="animationSpeedValue">0.45</span>
+        </label>
+
+        <input
+          type="range"
+          id="animationSpeed"
+          min="0"
+          max="120"
+          value="45"
+        />
+      </div>
+
+      <div class="control">
+        <label for="palette">
+          Color Palette
+        </label>
+
+        <select id="palette">
+          <option value="neon">Neon Glass</option>
+          <option value="ocean">Ocean</option>
+          <option value="sunset">Sunset</option>
+          <option value="forest">Forest</option>
+          <option value="candy">Candy</option>
+          <option value="mono">Monochrome</option>
+          <option value="rainbow">Rainbow</option>
+        </select>
+      </div>
+
+      <div class="switch-grid">
+        <label class="switch-row">
+          <span>
+            <strong>Animate Points</strong>
+            <small>Move cells automatically</small>
+          </span>
+
+          <input type="checkbox" id="animateToggle" checked />
+          <i></i>
+        </label>
+
+        <label class="switch-row">
+          <span>
+            <strong>Cell Edges</strong>
+            <small>Show Voronoi borders</small>
+          </span>
+
+          <input type="checkbox" id="edgesToggle" checked />
+          <i></i>
+        </label>
+
+        <label class="switch-row">
+          <span>
+            <strong>Control Points</strong>
+            <small>Display generator points</small>
+          </span>
+
+          <input type="checkbox" id="pointsToggle" checked />
+          <i></i>
+        </label>
+
+        <label class="switch-row">
+          <span>
+            <strong>Delaunay Links</strong>
+            <small>Show neighboring connections</small>
+          </span>
+
+          <input type="checkbox" id="delaunayToggle" />
+          <i></i>
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button id="randomBtn" type="button">Randomize</button>
+        <button id="addBtn" type="button">Add Point</button>
+        <button id="relaxBtn" type="button">Relax</button>
+        <button id="burstBtn" type="button">Color Burst</button>
+        <button id="resetBtn" type="button">Reset</button>
+        <button id="saveBtn" type="button">Save PNG</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="hint">
+    <span>Click</span> add point
+    <span>Drag</span> move point
+    <span>Right click</span> remove point
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
